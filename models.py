@@ -10,7 +10,7 @@ class Client(Base ):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     age = Column(Integer)
-    weight = Column(Integer)
+    weight = Column(Float)
     goal = Column(String)
     
     progress = relationship("ProgressEntry", back_populates="client")

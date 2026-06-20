@@ -31,14 +31,14 @@ def create_client(
 
 @app.get("/clients", response_model=List[ClientSchema])
 def get_clients(db: Session = Depends(get_db)):
-    return db.query(models.Client)
+    return db.query(models.Client).all()
 
 
 @app.put("/clients/{client_id}")
 def update_client(
     client_id: int, weight: float, goal: str, db: Session = Depends(get_db)
 ):
-    client = db.query(models.client).filter(models.client.id == client_id).first()
+    client = db.query(models.Client).filter(models.Client.id == client_id).first()
     if not client:
         return {"error": "Client niet gevonden"}
     client.weight = weight

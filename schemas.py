@@ -7,7 +7,8 @@ class ClientSchema(BaseModel):
     age: int
     weight: float
     goal: str
-
+    class Config:
+        from_attributes = True
 class ProgressEntrySchema(BaseModel):
     id: int
     client_id: int
@@ -19,5 +20,5 @@ class ProgressEntrySchema(BaseModel):
     skeletal_muscle: float
     muscle_mass: float
 
-class Config:
-    from_attributes = True
+    class Config:
+        from_attributes = True
