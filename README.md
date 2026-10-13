@@ -44,3 +44,11 @@ Request bodies are JSON.
 ## Documentation
 
 Run the server and visit http://127.0.0.1:8000/docs for interactive API documentation.
+
+## Roadmap
+
+Planned expansions are marked in the code with `# EXPANSION:` comments, each one explaining what will be added there. List them all with:
+
+`grep -rn "EXPANSION" *.py`
+
+Also planned: automated tests in a `tests/` folder (pytest + FastAPI TestClient).
