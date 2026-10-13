@@ -23,8 +23,10 @@ A REST API for fitness client management, built with FastAPI and PostgreSQL.
 2. Install dependencies:
    `pip install -r requirements.txt`
 3. Set up PostgreSQL and create a database called `fitcore`
-4. Copy `.env.example` to `.env` and fill in your `DATABASE_URL`
-5. Run the server:
+4. Copy `.env.example` to `.env` and fill in your `DATABASE_URL` (without password)
+5. Store the database password encrypted in your OS keyring (Windows Credential Manager):
+   `python db_password.py`
+6. Run the server:
    `uvicorn main:app --reload`
 
 ## API Endpoints
